@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a8397ae9-3796-42ea-b8a0-77da4ceeb70c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/util/HibernateUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/HibernateRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/HibernateRunner.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -163,7 +164,7 @@
       <updated>1709557753012</updated>
       <workItem from="1709557754067" duration="21547000" />
       <workItem from="1709582440520" duration="3896000" />
-      <workItem from="1709588948994" duration="1500000" />
+      <workItem from="1709588948994" duration="4093000" />
     </task>
     <servers />
   </component>
