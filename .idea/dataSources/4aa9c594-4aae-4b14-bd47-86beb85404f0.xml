@@ -3,7 +3,7 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.51">
     <root id="1">
       <DateStyle>mdy</DateStyle>
-      <IntrospectionStateNumber>760</IntrospectionStateNumber>
+      <IntrospectionStateNumber>765</IntrospectionStateNumber>
       <ServerVersion>16.2</ServerVersion>
       <StartupTime>1709559042</StartupTime>
       <TimeZones>true ACDT
@@ -1400,7 +1400,7 @@ false posixrules
 13212||10|C|G
 13212||-9223372036854775808|U|G
 13212||10|U|G</Grants>
-      <IntrospectionStateNumber>760</IntrospectionStateNumber>
+      <IntrospectionStateNumber>765</IntrospectionStateNumber>
       <ObjectId>5</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
@@ -4819,15 +4819,15 @@ false posixrules
     <schema id="263" parent="2" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>760</IntrospectionStateNumber>
-      <LastIntrospectionLocalTimestamp>2024-03-04.16:53:40</LastIntrospectionLocalTimestamp>
+      <IntrospectionStateNumber>765</IntrospectionStateNumber>
+      <LastIntrospectionLocalTimestamp>2024-03-04.17:11:21</LastIntrospectionLocalTimestamp>
       <ObjectId>2200</ObjectId>
       <StateNumber>524</StateNumber>
       <OwnerName>pg_database_owner</OwnerName>
     </schema>
     <table id="264" parent="263" name="users">
-      <ObjectId>16403</ObjectId>
-      <StateNumber>759</StateNumber>
+      <ObjectId>16408</ObjectId>
+      <StateNumber>764</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
@@ -4835,51 +4835,57 @@ false posixrules
       <DasType>varchar(128)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>759</StateNumber>
+      <StateNumber>764</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="266" parent="264" name="firstname">
       <DasType>varchar(128)|0s</DasType>
       <Position>2</Position>
-      <StateNumber>759</StateNumber>
+      <StateNumber>764</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="267" parent="264" name="lastname">
       <DasType>varchar(128)|0s</DasType>
       <Position>3</Position>
-      <StateNumber>759</StateNumber>
+      <StateNumber>764</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="268" parent="264" name="birth_date">
       <DasType>date|0s</DasType>
       <Position>4</Position>
-      <StateNumber>759</StateNumber>
+      <StateNumber>764</StateNumber>
       <TypeId>1082</TypeId>
     </column>
     <column id="269" parent="264" name="role">
       <DasType>varchar(32)|0s</DasType>
       <Position>5</Position>
-      <StateNumber>759</StateNumber>
+      <StateNumber>764</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="270" parent="264" name="users_pkey">
+    <column id="270" parent="264" name="info">
+      <DasType>jsonb|0s</DasType>
+      <Position>6</Position>
+      <StateNumber>764</StateNumber>
+      <TypeId>3802</TypeId>
+    </column>
+    <index id="271" parent="264" name="users_pkey">
       <ColNames>username</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16406</ObjectId>
+      <ObjectId>16413</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>759</StateNumber>
+      <StateNumber>764</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
       <CollationNames>default</CollationNames>
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <key id="271" parent="264" name="users_pkey">
+    <key id="272" parent="264" name="users_pkey">
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16407</ObjectId>
+      <ObjectId>16414</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>759</StateNumber>
-      <UnderlyingIndexId>16406</UnderlyingIndexId>
+      <StateNumber>764</StateNumber>
+      <UnderlyingIndexId>16413</UnderlyingIndexId>
     </key>
   </database-model>
 </dataSource>

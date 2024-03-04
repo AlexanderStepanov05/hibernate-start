@@ -30,6 +30,12 @@ public class HibernateRunner {
                     .lastname("Ivanov")
                     .birthDate(new Birthday(LocalDate.of(2000, 1, 1)))
                     .role(Role.ADMIN)
+                    .info("""
+                            {
+                            "name": "Ivan",
+                            "id": 25
+                            }
+                            """)
                     .build();
 
             session.persist(user);

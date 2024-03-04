@@ -25,7 +25,6 @@ class HibernateRunnerTest {
                 .firstname("Ivan")
                 .lastname("Ivanov")
                 .birthDate(new Birthday(LocalDate.of(2000, 1, 1)))
-                .age(20)
                 .build();
 
         String sql = """
