@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a8397ae9-3796-42ea-b8a0-77da4ceeb70c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/HibernateRunnerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/HibernateRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/HibernateRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +24,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -41,10 +42,13 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Gradle.hibernate-start [:HibernateRunner.main()].executor": "Debug",
+    "Gradle.HibernateRunnerTest.checkReflectionApi.executor": "Run",
+    "Gradle.hibernate-start [:HibernateRunner.main()].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "main",
     "jdk.selected.JAVA_MODULE": "21",
     "kotlin-language-version-configured": "true",
@@ -65,7 +69,15 @@
     ]
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="org.example" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Gradle.HibernateRunnerTest.checkReflectionApi">
     <configuration name="HibernateRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.HibernateRunner" />
       <module name="hibernate-start.main" />
@@ -79,8 +91,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="HibernateRunnerTest.checkReflectionApi" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;org.example.HibernateRunnerTest.checkReflectionApi&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.HibernateRunnerTest.checkReflectionApi" />
         <item itemvalue="Application.HibernateRunner" />
       </list>
     </recent_temporary>
@@ -100,7 +137,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1709557753012</updated>
-      <workItem from="1709557754067" duration="6899000" />
+      <workItem from="1709557754067" duration="9427000" />
     </task>
     <servers />
   </component>
