@@ -6,9 +6,12 @@ import org.example.entity.Birthday;
 import org.example.entity.User;
 import org.junit.jupiter.api.Test;
 
+import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
+import java.lang.reflect.InvocationTargetException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.Arrays;
@@ -17,6 +20,28 @@ import static java.util.Optional.ofNullable;
 import static java.util.stream.Collectors.joining;
 
 class HibernateRunnerTest {
+
+    @Test
+    void checkGetReflectionApi() throws SQLException,
+            NoSuchMethodException,
+            InvocationTargetException,
+            InstantiationException,
+            IllegalAccessException,
+            NoSuchFieldException {
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = preparedStatement.executeQuery();
+        resultSet.getString("username");
+        resultSet.getString("firstname");
+        resultSet.getString("lastname");
+
+        Class<User> aClass = User.class;
+
+        Constructor<User> constructor = aClass.getConstructor();
+        User user = constructor.newInstance();
+        Field username = aClass.getDeclaredField("username");
+        username.setAccessible(true);
+        username.set(user, resultSet.getString("username"));
+    }
 
     @Test
     void checkReflectionApi() throws SQLException, IllegalAccessException {
