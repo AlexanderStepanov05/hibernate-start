@@ -18,13 +18,15 @@ import org.hibernate.type.SqlTypes;
 public class User {
 
     @Id
-    private String username;
-    private String firstname;
-    private String lastname;
+    @GeneratedValue(generator = "user_gen", strategy = GenerationType.SEQUENCE)
+    @SequenceGenerator(name = "user_gen", sequenceName = "users_id_seq", allocationSize = 1)
+    private Long id;
 
-//    @Convert(converter = BirthdayConverter.class)
-    @Column(name = "birth_date")
-    private Birthday birthDate;
+    @Column(unique = true)
+    private String username;
+
+    @Embedded
+    private PersonalInfo personalInfo;
 
     @Enumerated(EnumType.STRING)
     private Role role;

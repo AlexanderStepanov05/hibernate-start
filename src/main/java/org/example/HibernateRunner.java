@@ -1,6 +1,7 @@
 package org.example;
 
 import lombok.extern.slf4j.Slf4j;
+import org.example.entity.PersonalInfo;
 import org.example.entity.User;
 import org.example.util.HibernateUtil;
 import org.hibernate.Session;
@@ -16,9 +17,11 @@ public class HibernateRunner {
 
     public static void main(String[] args) {
         User user = User.builder()          // transient to s1 and s2
-                .username("ivan1@gmail.com")
-                .firstname("Ivan")
-                .lastname("Ivanov")
+                .username("ivan2@gmail.com")
+                .personalInfo(PersonalInfo.builder()
+                        .firstname("Ivan")
+                        .lastname("Ivanov")
+                        .build())
                 .build();
 
         log.info("User entity is in transient state, object: {}", user);
