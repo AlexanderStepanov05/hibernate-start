@@ -6,11 +6,17 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
 
+import java.io.Serial;
+import java.io.Serializable;
+
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
 @Embeddable
-public class PersonalInfo {
+public class PersonalInfo implements Serializable {
+
+    @Serial
+    private static final long serialVersionUID = 8823884665363962442L;
 
     private String firstname;
     private String lastname;

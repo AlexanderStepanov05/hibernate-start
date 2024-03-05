@@ -15,22 +15,21 @@ import org.hibernate.type.SqlTypes;
 @Builder
 @Entity
 @Table(name = "users", schema = "public")
+@Access(value = AccessType.FIELD)
 public class User {
-
-    @Id
-    @GeneratedValue(generator = "user_gen", strategy = GenerationType.SEQUENCE)
-    @SequenceGenerator(name = "user_gen", sequenceName = "users_id_seq", allocationSize = 1)
-    private Long id;
+    @EmbeddedId
+    private PersonalInfo personalInfo;
 
     @Column(unique = true)
     private String username;
 
-    @Embedded
-    private PersonalInfo personalInfo;
 
+//    @Transient
     @Enumerated(EnumType.STRING)
     private Role role;
 
     @JdbcTypeCode(SqlTypes.JSON)
     private String info;
+
+// @ColumnTransformer, @Formula
 }
