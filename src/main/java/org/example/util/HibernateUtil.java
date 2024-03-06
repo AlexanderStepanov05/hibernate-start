@@ -2,6 +2,7 @@ package org.example.util;
 
 import lombok.experimental.UtilityClass;
 import org.example.converter.BirthdayConverter;
+import org.example.entity.Company;
 import org.example.entity.User;
 
 import org.hibernate.SessionFactory;
@@ -13,6 +14,7 @@ public class HibernateUtil {
         Configuration configuration = new Configuration();
 //        configuration.setPhysicalNamingStrategy(new CamelCaseToUnderscoresNamingStrategy());
         configuration.addAttributeConverter(new BirthdayConverter());
+        configuration.addAnnotatedClass(Company.class);
         configuration.addAnnotatedClass(User.class);
         configuration.configure();
 

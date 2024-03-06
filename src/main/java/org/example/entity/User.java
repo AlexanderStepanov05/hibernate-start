@@ -15,21 +15,25 @@ import org.hibernate.type.SqlTypes;
 @Builder
 @Entity
 @Table(name = "users", schema = "public")
-@Access(value = AccessType.FIELD)
 public class User {
-    @EmbeddedId
-    private PersonalInfo personalInfo;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     @Column(unique = true)
     private String username;
 
+    @Embedded
+    private PersonalInfo personalInfo;
 
-//    @Transient
     @Enumerated(EnumType.STRING)
     private Role role;
 
     @JdbcTypeCode(SqlTypes.JSON)
     private String info;
 
-// @ColumnTransformer, @Formula
+    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @JoinColumn(name = "company_id")
+    private Company company;
 }
