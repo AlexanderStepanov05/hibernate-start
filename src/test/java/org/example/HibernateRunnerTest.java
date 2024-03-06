@@ -2,8 +2,12 @@ package org.example;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Table;
+import lombok.Cleanup;
 import org.example.entity.Birthday;
+import org.example.entity.Company;
+import org.example.entity.PersonalInfo;
 import org.example.entity.User;
+import org.example.util.HibernateUtil;
 import org.junit.jupiter.api.Test;
 
 import java.lang.reflect.Constructor;
@@ -20,6 +24,40 @@ import static java.util.Optional.ofNullable;
 import static java.util.stream.Collectors.joining;
 
 class HibernateRunnerTest {
+
+    @Test
+    void addUserToNewCompany() {
+        @Cleanup var sessionFactory = HibernateUtil.buildSessionFactory();
+        @Cleanup var session = sessionFactory.openSession();
+        session.beginTransaction();
+
+        var company = Company.builder()
+                .name("Facebook")
+                .build();
+
+        var user = User.builder()
+                .username("sveta@gmail.com")
+                .build();
+
+        company.addUser(user);
+
+        session.persist(company);
+
+        session.getTransaction().commit();
+    }
+
+    @Test
+    void oneToMany() {
+        @Cleanup var sessionFactory = HibernateUtil.buildSessionFactory();
+        @Cleanup var session = sessionFactory.openSession();
+        session.beginTransaction();
+
+        var company = session.get(Company.class, 1);
+        System.out.println("");
+
+        session.getTransaction().commit();
+
+    }
 
     @Test
     void checkGetReflectionApi() throws SQLException,
@@ -45,11 +83,14 @@ class HibernateRunnerTest {
 
     @Test
     void checkReflectionApi() throws SQLException, IllegalAccessException {
-        User user = User.builder()
-                .username("ivan@gmail.com")
-                .firstname("Ivan")
-                .lastname("Ivanov")
-                .birthDate(new Birthday(LocalDate.of(2000, 1, 1)))
+        User user = User.builder()          // transient to s1 and s2
+                .username("ivan2@gmail.com")
+                .personalInfo(PersonalInfo.builder()
+                        .firstname("Ivan")
+                        .lastname("Ivanov")
+                        .birthDate(new Birthday(LocalDate.of(2000, 1, 1)))
+                        .build())
+//                .company(company)
                 .build();
 
         String sql = """

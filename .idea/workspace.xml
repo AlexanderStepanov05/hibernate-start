@@ -5,16 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a8397ae9-3796-42ea-b8a0-77da4ceeb70c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/Company.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/CompanyProxy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/ProxyTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4aa9c594-4aae-4b14-bd47-86beb85404f0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/4aa9c594-4aae-4b14-bd47-86beb85404f0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4aa9c594-4aae-4b14-bd47-86beb85404f0/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/4aa9c594-4aae-4b14-bd47-86beb85404f0/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hibernate-starter.log" beforeDir="false" afterPath="$PROJECT_DIR$/hibernate-starter.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/HibernateRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/HibernateRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/util/HibernateUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/util/HibernateUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entity/Company.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/Company.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/HibernateRunnerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/HibernateRunnerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +47,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Gradle.HibernateRunnerTest.checkReflectionApi.executor": "Run",
+    "Gradle.HibernateRunnerTest.oneToMany.executor": "Run",
     "Gradle.hibernate-start [:HibernateRunner.main()].executor": "Run",
     "Gradle.hibernate-start [dependencies].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
@@ -88,7 +83,7 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.HibernateRunner">
+  <component name="RunManager" selected="Gradle.HibernateRunnerTest.addUserToNewCompany">
     <configuration name="HibernateRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.HibernateRunner" />
       <module name="hibernate-start.main" />
@@ -101,6 +96,30 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="HibernateRunnerTest.addUserToNewCompany" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;org.example.HibernateRunnerTest.addUserToNewCompany&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
     </configuration>
     <configuration name="HibernateRunnerTest.checkReflectionApi" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -116,6 +135,30 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;org.example.HibernateRunnerTest.checkReflectionApi&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="HibernateRunnerTest.oneToMany" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;org.example.HibernateRunnerTest.oneToMany&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -150,6 +193,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.HibernateRunnerTest.addUserToNewCompany" />
+        <item itemvalue="Gradle.HibernateRunnerTest.oneToMany" />
         <item itemvalue="Gradle.hibernate-start [dependencies]" />
         <item itemvalue="Gradle.HibernateRunnerTest.checkReflectionApi" />
         <item itemvalue="Application.HibernateRunner" />
@@ -174,7 +219,7 @@
       <workItem from="1709557754067" duration="21547000" />
       <workItem from="1709582440520" duration="3896000" />
       <workItem from="1709588948994" duration="11417000" />
-      <workItem from="1709713174570" duration="1662000" />
+      <workItem from="1709713174570" duration="4941000" />
     </task>
     <servers />
   </component>
