@@ -10,7 +10,7 @@ import java.util.Set;
 @Data
 @NoArgsConstructor
 @EqualsAndHashCode(of = "name")
-@ToString(exclude = "users")
+@ToString(exclude = "userChats")
 @AllArgsConstructor
 @Builder
 public class Chat {
@@ -22,7 +22,7 @@ public class Chat {
     @Column(nullable = false, unique = true)
     private String name;
 
-    @ManyToMany(mappedBy = "chats")
+    @OneToMany(mappedBy = "chat")
     @Builder.Default
-    private Set<User> users = new HashSet<>();
+    private Set<UserChat> userChats = new HashSet<>();
 }

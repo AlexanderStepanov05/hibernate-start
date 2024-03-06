@@ -14,6 +14,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.time.Instant;
 import java.time.LocalDate;
 import java.util.Arrays;
 
@@ -29,13 +30,16 @@ class HibernateRunnerTest {
             session.beginTransaction();
 
             var user = session.get(User.class, 4L);
+            var chat = session.get(Chat.class, 1L);
 
-            var chat = Chat.builder()
-                    .name("java")
+            var userChat = UserChat.builder()
+                    .createdAt(Instant.now())
+                    .createdBy(user.getUsername())
                     .build();
-            user.addChat(chat);
+            userChat.setChat(chat);
+            userChat.setUser(user);
 
-            session.persist(chat);
+            session.persist(userChat);
 
             session.getTransaction().commit();
         }
