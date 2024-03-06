@@ -3,9 +3,9 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.51">
     <root id="1">
       <DateStyle>mdy</DateStyle>
-      <IntrospectionStateNumber>791</IntrospectionStateNumber>
+      <IntrospectionStateNumber>801</IntrospectionStateNumber>
       <ServerVersion>16.2</ServerVersion>
-      <StartupTime>1709588920</StartupTime>
+      <StartupTime>1709719658</StartupTime>
       <TimeZones>true ACDT
 true ACSST
 false ACST
@@ -1400,54 +1400,54 @@ false posixrules
 13212||10|C|G
 13212||-9223372036854775808|U|G
 13212||10|U|G</Grants>
-      <IntrospectionStateNumber>791</IntrospectionStateNumber>
+      <IntrospectionStateNumber>801</IntrospectionStateNumber>
       <ObjectId>5</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
-    <role id="3" parent="1" name="pg_database_owner">
+    <role id="3" parent="1" name="pg_checkpoint">
+      <ObjectId>4544</ObjectId>
+    </role>
+    <role id="4" parent="1" name="pg_create_subscription">
+      <ObjectId>6304</ObjectId>
+    </role>
+    <role id="5" parent="1" name="pg_database_owner">
       <ObjectId>6171</ObjectId>
     </role>
-    <role id="4" parent="1" name="pg_read_all_data">
-      <ObjectId>6181</ObjectId>
+    <role id="6" parent="1" name="pg_execute_server_program">
+      <ObjectId>4571</ObjectId>
     </role>
-    <role id="5" parent="1" name="pg_write_all_data">
-      <ObjectId>6182</ObjectId>
-    </role>
-    <role id="6" parent="1" name="pg_monitor">
+    <role id="7" parent="1" name="pg_monitor">
       <ObjectId>3373</ObjectId>
       <RoleGrants>3374
 3375
 3377</RoleGrants>
     </role>
-    <role id="7" parent="1" name="pg_read_all_settings">
+    <role id="8" parent="1" name="pg_read_all_data">
+      <ObjectId>6181</ObjectId>
+    </role>
+    <role id="9" parent="1" name="pg_read_all_settings">
       <ObjectId>3374</ObjectId>
     </role>
-    <role id="8" parent="1" name="pg_read_all_stats">
+    <role id="10" parent="1" name="pg_read_all_stats">
       <ObjectId>3375</ObjectId>
     </role>
-    <role id="9" parent="1" name="pg_stat_scan_tables">
-      <ObjectId>3377</ObjectId>
-    </role>
-    <role id="10" parent="1" name="pg_read_server_files">
+    <role id="11" parent="1" name="pg_read_server_files">
       <ObjectId>4569</ObjectId>
     </role>
-    <role id="11" parent="1" name="pg_write_server_files">
-      <ObjectId>4570</ObjectId>
-    </role>
-    <role id="12" parent="1" name="pg_execute_server_program">
-      <ObjectId>4571</ObjectId>
-    </role>
-    <role id="13" parent="1" name="pg_signal_backend">
+    <role id="12" parent="1" name="pg_signal_backend">
       <ObjectId>4200</ObjectId>
     </role>
-    <role id="14" parent="1" name="pg_checkpoint">
-      <ObjectId>4544</ObjectId>
+    <role id="13" parent="1" name="pg_stat_scan_tables">
+      <ObjectId>3377</ObjectId>
     </role>
-    <role id="15" parent="1" name="pg_use_reserved_connections">
+    <role id="14" parent="1" name="pg_use_reserved_connections">
       <ObjectId>4550</ObjectId>
     </role>
-    <role id="16" parent="1" name="pg_create_subscription">
-      <ObjectId>6304</ObjectId>
+    <role id="15" parent="1" name="pg_write_all_data">
+      <ObjectId>6182</ObjectId>
+    </role>
+    <role id="16" parent="1" name="pg_write_server_files">
+      <ObjectId>4570</ObjectId>
     </role>
     <role id="17" parent="1" name="postgres">
       <BypassRls>1</BypassRls>
@@ -4819,8 +4819,8 @@ false posixrules
     <schema id="263" parent="2" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>791</IntrospectionStateNumber>
-      <LastIntrospectionLocalTimestamp>2024-03-05.11:59:02</LastIntrospectionLocalTimestamp>
+      <IntrospectionStateNumber>801</IntrospectionStateNumber>
+      <LastIntrospectionLocalTimestamp>2024-03-06.16:13:22</LastIntrospectionLocalTimestamp>
       <ObjectId>2200</ObjectId>
       <StateNumber>524</StateNumber>
       <OwnerName>pg_database_owner</OwnerName>
@@ -4833,7 +4833,15 @@ false posixrules
       <StateNumber>786</StateNumber>
       <OwnerName>postgres</OwnerName>
     </sequence>
-    <sequence id="265" parent="263" name="users_id_seq">
+    <sequence id="265" parent="263" name="profile_id_seq">
+      <DasType>bigint|0s</DasType>
+      <ObjectId>32778</ObjectId>
+      <SequenceIdentity>1</SequenceIdentity>
+      <StartValue>1</StartValue>
+      <StateNumber>800</StateNumber>
+      <OwnerName>postgres</OwnerName>
+    </sequence>
+    <sequence id="266" parent="263" name="users_id_seq">
       <DasType>bigint|0s</DasType>
       <ObjectId>24609</ObjectId>
       <SequenceIdentity>1</SequenceIdentity>
@@ -4841,19 +4849,25 @@ false posixrules
       <StateNumber>790</StateNumber>
       <OwnerName>postgres</OwnerName>
     </sequence>
-    <table id="266" parent="263" name="company">
+    <table id="267" parent="263" name="company">
       <ObjectId>24601</ObjectId>
       <StateNumber>790</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="267" parent="263" name="users">
+    <table id="268" parent="263" name="profile">
+      <ObjectId>32779</ObjectId>
+      <StateNumber>800</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>postgres</OwnerName>
+    </table>
+    <table id="269" parent="263" name="users">
       <ObjectId>24610</ObjectId>
       <StateNumber>790</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <column id="268" parent="266" name="id">
+    <column id="270" parent="267" name="id">
       <DasType>integer|0s</DasType>
       <DefaultExpression>nextval(&apos;company_id_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
@@ -4862,14 +4876,14 @@ false posixrules
       <SequenceId>24600</SequenceId>
       <TypeId>23</TypeId>
     </column>
-    <column id="269" parent="266" name="name">
+    <column id="271" parent="267" name="name">
       <DasType>varchar(64)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>786</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="270" parent="266" name="company_pkey">
+    <index id="272" parent="267" name="company_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>24605</ObjectId>
@@ -4878,7 +4892,7 @@ false posixrules
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="271" parent="266" name="company_name_key">
+    <index id="273" parent="267" name="company_name_key">
       <ColNames>name</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>24607</ObjectId>
@@ -4889,20 +4903,86 @@ false posixrules
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <key id="272" parent="266" name="company_pkey">
+    <key id="274" parent="267" name="company_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>24606</ObjectId>
       <Primary>1</Primary>
       <StateNumber>786</StateNumber>
       <UnderlyingIndexId>24605</UnderlyingIndexId>
     </key>
-    <key id="273" parent="266" name="company_name_key">
+    <key id="275" parent="267" name="company_name_key">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>24608</ObjectId>
       <StateNumber>786</StateNumber>
       <UnderlyingIndexId>24607</UnderlyingIndexId>
     </key>
-    <column id="274" parent="267" name="id">
+    <column id="276" parent="268" name="id">
+      <DasType>bigint|0s</DasType>
+      <DefaultExpression>nextval(&apos;profile_id_seq&apos;::regclass)</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>800</StateNumber>
+      <SequenceId>32778</SequenceId>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="277" parent="268" name="user_id">
+      <DasType>bigint|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StateNumber>800</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="278" parent="268" name="street">
+      <DasType>varchar(128)|0s</DasType>
+      <Position>3</Position>
+      <StateNumber>800</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="279" parent="268" name="language">
+      <DasType>char(2)|0s</DasType>
+      <Position>4</Position>
+      <StateNumber>800</StateNumber>
+      <TypeId>1042</TypeId>
+    </column>
+    <foreign-key id="280" parent="268" name="profile_user_id_fkey">
+      <ColNames>user_id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>32787</ObjectId>
+      <StateNumber>800</StateNumber>
+      <RefKeyColPositions>1</RefKeyColPositions>
+      <RefTableId>24610</RefTableId>
+    </foreign-key>
+    <index id="281" parent="268" name="profile_pkey">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>32783</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>800</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <index id="282" parent="268" name="profile_user_id_key">
+      <ColNames>user_id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>32785</ObjectId>
+      <StateNumber>800</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="283" parent="268" name="profile_pkey">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>32784</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>800</StateNumber>
+      <UnderlyingIndexId>32783</UnderlyingIndexId>
+    </key>
+    <key id="284" parent="268" name="profile_user_id_key">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>32786</ObjectId>
+      <StateNumber>800</StateNumber>
+      <UnderlyingIndexId>32785</UnderlyingIndexId>
+    </key>
+    <column id="285" parent="269" name="id">
       <DasType>bigint|0s</DasType>
       <DefaultExpression>nextval(&apos;users_id_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
@@ -4911,49 +4991,49 @@ false posixrules
       <SequenceId>24609</SequenceId>
       <TypeId>20</TypeId>
     </column>
-    <column id="275" parent="267" name="firstname">
+    <column id="286" parent="269" name="firstname">
       <DasType>varchar(128)|0s</DasType>
       <Position>2</Position>
       <StateNumber>790</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="276" parent="267" name="lastname">
+    <column id="287" parent="269" name="lastname">
       <DasType>varchar(128)|0s</DasType>
       <Position>3</Position>
       <StateNumber>790</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="277" parent="267" name="birth_date">
+    <column id="288" parent="269" name="birth_date">
       <DasType>date|0s</DasType>
       <Position>4</Position>
       <StateNumber>790</StateNumber>
       <TypeId>1082</TypeId>
     </column>
-    <column id="278" parent="267" name="username">
+    <column id="289" parent="269" name="username">
       <DasType>varchar(128)|0s</DasType>
       <Position>5</Position>
       <StateNumber>790</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="279" parent="267" name="role">
+    <column id="290" parent="269" name="role">
       <DasType>varchar(32)|0s</DasType>
       <Position>6</Position>
       <StateNumber>790</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="280" parent="267" name="info">
+    <column id="291" parent="269" name="info">
       <DasType>jsonb|0s</DasType>
       <Position>7</Position>
       <StateNumber>790</StateNumber>
       <TypeId>3802</TypeId>
     </column>
-    <column id="281" parent="267" name="company_id">
+    <column id="292" parent="269" name="company_id">
       <DasType>integer|0s</DasType>
       <Position>8</Position>
       <StateNumber>790</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <foreign-key id="282" parent="267" name="users_company_id_fkey">
+    <foreign-key id="293" parent="269" name="users_company_id_fkey">
       <ColNames>company_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>24618</ObjectId>
@@ -4961,7 +5041,7 @@ false posixrules
       <RefKeyColPositions>1</RefKeyColPositions>
       <RefTableId>24601</RefTableId>
     </foreign-key>
-    <index id="283" parent="267" name="users_pkey">
+    <index id="294" parent="269" name="users_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>24616</ObjectId>
@@ -4970,7 +5050,7 @@ false posixrules
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="284" parent="267" name="users_pkey">
+    <key id="295" parent="269" name="users_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>24617</ObjectId>
       <Primary>1</Primary>

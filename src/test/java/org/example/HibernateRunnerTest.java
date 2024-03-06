@@ -3,10 +3,7 @@ package org.example;
 import jakarta.persistence.Column;
 import jakarta.persistence.Table;
 import lombok.Cleanup;
-import org.example.entity.Birthday;
-import org.example.entity.Company;
-import org.example.entity.PersonalInfo;
-import org.example.entity.User;
+import org.example.entity.*;
 import org.example.util.HibernateUtil;
 import org.junit.jupiter.api.Test;
 
@@ -24,6 +21,28 @@ import static java.util.Optional.ofNullable;
 import static java.util.stream.Collectors.joining;
 
 class HibernateRunnerTest {
+
+    @Test
+    void checkOneToOne() {
+        try (var sessionFactory = HibernateUtil.buildSessionFactory();
+            var session = sessionFactory.openSession()) {
+            session.beginTransaction();
+            var user = User.builder()
+                    .username("sveta1@gmail.com")
+                    .build();
+
+            var profile = Profile.builder()
+                    .language("ru")
+                    .street("Lesnaya")
+                    .build();
+
+            profile.setUser(user);
+            session.persist(user);
+//            session.persist(profile);
+
+            session.getTransaction().commit();
+        }
+    }
 
     @Test
     void addUserToNewCompany() {
