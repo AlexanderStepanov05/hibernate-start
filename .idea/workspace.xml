@@ -5,15 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a8397ae9-3796-42ea-b8a0-77da4ceeb70c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/LocaleInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/4aa9c594-4aae-4b14-bd47-86beb85404f0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/4aa9c594-4aae-4b14-bd47-86beb85404f0.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/4aa9c594-4aae-4b14-bd47-86beb85404f0/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/4aa9c594-4aae-4b14-bd47-86beb85404f0/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hibernate-starter.log" beforeDir="false" afterPath="$PROJECT_DIR$/hibernate-starter.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entity/Chat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/Chat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entity/Company.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/Company.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/HibernateRunnerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/HibernateRunnerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,6 +64,7 @@
     "git-widget-placeholder": "main",
     "jdk.selected.JAVA_MODULE": "21",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/inkerinmaa/hibernate-start/src/test/resources",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -75,7 +73,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "database.query.execution",
+    "settings.editor.selected.configurable": "http.proxy",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -85,6 +83,9 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/resources" />
+    </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
@@ -92,7 +93,7 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.HibernateRunnerTest.localeInfo">
+  <component name="RunManager" selected="Gradle.HibernateRunnerTest.checkH2">
     <configuration name="HibernateRunnerTest.addUserToNewCompany" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -107,6 +108,30 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;org.example.HibernateRunnerTest.addUserToNewCompany&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="HibernateRunnerTest.checkH2" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;org.example.HibernateRunnerTest.checkH2&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -189,37 +214,13 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="HibernateRunnerTest.oneToMany" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;org.example.HibernateRunnerTest.oneToMany&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.HibernateRunnerTest.checkH2" />
         <item itemvalue="Gradle.HibernateRunnerTest.localeInfo" />
         <item itemvalue="Gradle.HibernateRunnerTest.checkManyToMany" />
         <item itemvalue="Gradle.HibernateRunnerTest.checkOneToOne" />
         <item itemvalue="Gradle.HibernateRunnerTest.addUserToNewCompany" />
-        <item itemvalue="Gradle.HibernateRunnerTest.oneToMany" />
       </list>
     </recent_temporary>
   </component>
@@ -241,7 +242,8 @@
       <workItem from="1709557754067" duration="21547000" />
       <workItem from="1709582440520" duration="3896000" />
       <workItem from="1709588948994" duration="11417000" />
-      <workItem from="1709713174570" duration="19998000" />
+      <workItem from="1709713174570" duration="20124000" />
+      <workItem from="1709903190796" duration="1240000" />
     </task>
     <servers />
   </component>

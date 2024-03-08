@@ -26,7 +26,7 @@ public class Company {
 
     @Builder.Default
     @OneToMany(mappedBy = "company", cascade = CascadeType.ALL)
-    @OrderBy("username DESC, personalInfo.lastname ASC")
+//    @OrderBy("username DESC, personalInfo.lastname ASC")
     @SortNatural
     private Set<User> users = new TreeSet<>();
 

@@ -24,6 +24,22 @@ import static java.util.stream.Collectors.joining;
 class HibernateRunnerTest {
 
     @Test
+    void checkH2() {
+        try (var sessionFactory = HibernateUtil.buildSessionFactory();
+             var session = sessionFactory.openSession()) {
+            session.beginTransaction();
+
+            var company = Company.builder()
+                    .name("Facebook")
+                    .build();
+
+            session.persist(company);
+
+            session.getTransaction().commit();
+        }
+    }
+
+    @Test
     void localeInfo() {
         try (var sessionFactory = HibernateUtil.buildSessionFactory();
              var session = sessionFactory.openSession()) {

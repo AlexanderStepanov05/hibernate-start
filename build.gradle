@@ -30,6 +30,9 @@ dependencies {
 
     implementation 'org.slf4j:slf4j-reload4j:2.1.0-alpha1'
     implementation 'org.slf4j:slf4j-api:2.0.12'
+
+    testImplementation 'com.h2database:h2:2.2.224'
+
 }
 
 test {
