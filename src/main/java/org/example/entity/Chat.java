@@ -3,16 +3,16 @@ package org.example.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
-@Entity
 @Data
 @NoArgsConstructor
 @EqualsAndHashCode(of = "name")
 @ToString(exclude = "userChats")
 @AllArgsConstructor
 @Builder
+@Entity
 public class Chat {
 
     @Id
@@ -24,5 +24,5 @@ public class Chat {
 
     @OneToMany(mappedBy = "chat")
     @Builder.Default
-    private Set<UserChat> userChats = new HashSet<>();
+    private List<UserChat> userChats = new ArrayList<>();
 }

@@ -5,8 +5,8 @@ import lombok.*;
 import org.hibernate.annotations.JdbcTypeCode;
 import org.hibernate.type.SqlTypes;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
 @Data
 @NoArgsConstructor
@@ -16,7 +16,7 @@ import java.util.Set;
 @Builder
 @Entity
 @Table(name = "users", schema = "public")
-public class User {
+public class User implements Comparable<User> {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -43,5 +43,10 @@ public class User {
 
     @OneToMany(mappedBy = "user")
     @Builder.Default
-    private Set<UserChat> userChats = new HashSet<>();
+    private List<UserChat> userChats = new ArrayList<>();
+
+    @Override
+    public int compareTo(User user) {
+        return username.compareTo(user.username);
+    }
 }
