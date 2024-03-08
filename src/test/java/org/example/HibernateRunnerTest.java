@@ -14,7 +14,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.time.LocalDate;
 import java.util.Arrays;
 
 import static java.util.Optional.ofNullable;
@@ -28,11 +27,32 @@ class HibernateRunnerTest {
              var session = sessionFactory.openSession()) {
             session.beginTransaction();
 
-            var company = Company.builder()
+            var facebook = Company.builder()
                     .name("Facebook")
                     .build();
 
-            session.persist(company);
+            session.persist(facebook);
+
+            Programmer programmer = Programmer.builder()
+                    .username("ivan@gmail.com")
+                    .language(Language.JAVA)
+                    .company(facebook)
+                    .build();
+            session.persist(programmer);
+
+            Manager manager = Manager.builder()
+                    .username("sveta@gmail.com")
+                    .projectName("Starter")
+                    .company(facebook)
+                    .build();
+            session.persist(manager);
+            session.flush();
+
+            session.clear();
+
+            var programmer1 = session.get(Programmer.class, 1L);
+            var manager1 = session.get(User.class, 2L);
+            System.out.println();
 
             session.getTransaction().commit();
         }
@@ -82,17 +102,17 @@ class HibernateRunnerTest {
         try (var sessionFactory = HibernateUtil.buildSessionFactory();
             var session = sessionFactory.openSession()) {
             session.beginTransaction();
-            var user = User.builder()
-                    .username("sveta1@gmail.com")
-                    .build();
-
-            var profile = Profile.builder()
-                    .language("ru")
-                    .street("Lesnaya")
-                    .build();
-
-            profile.setUser(user);
-            session.persist(user);
+//            var user = User.builder()
+//                    .username("sveta1@gmail.com")
+//                    .build();
+//
+//            var profile = Profile.builder()
+//                    .language("ru")
+//                    .street("Lesnaya")
+//                    .build();
+//
+//            profile.setUser(user);
+//            session.persist(user);
 //            session.persist(profile);
 
             session.getTransaction().commit();
@@ -109,11 +129,11 @@ class HibernateRunnerTest {
                 .name("Facebook")
                 .build();
 
-        var user = User.builder()
-                .username("sveta@gmail.com")
-                .build();
-
-        company.addUser(user);
+//        var user = User.builder()
+//                .username("sveta@gmail.com")
+//                .build();
+//
+//        company.addUser(user);
 
         session.persist(company);
 
@@ -157,15 +177,7 @@ class HibernateRunnerTest {
 
     @Test
     void checkReflectionApi() throws SQLException, IllegalAccessException {
-        User user = User.builder()          // transient to s1 and s2
-                .username("ivan2@gmail.com")
-                .personalInfo(PersonalInfo.builder()
-                        .firstname("Ivan")
-                        .lastname("Ivanov")
-                        .birthDate(new Birthday(LocalDate.of(2000, 1, 1)))
-                        .build())
-//                .company(company)
-                .build();
+        User user = null;
 
         String sql = """
                 insert
