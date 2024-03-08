@@ -13,6 +13,8 @@ public class HibernateUtil {
         Configuration configuration = new Configuration();
 //        configuration.setPhysicalNamingStrategy(new CamelCaseToUnderscoresNamingStrategy());
         configuration.addAttributeConverter(new BirthdayConverter());
+        configuration.addAnnotatedClass(Manager.class);
+        configuration.addAnnotatedClass(Programmer.class);
         configuration.addAnnotatedClass(UserChat.class);
         configuration.addAnnotatedClass(Chat.class);
         configuration.addAnnotatedClass(Profile.class);

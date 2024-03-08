@@ -13,13 +13,13 @@ import java.util.List;
 @AllArgsConstructor
 @EqualsAndHashCode(of = "username")
 @ToString(exclude = {"company", "profile", "userChats"})
-@Builder
 @Entity
 @Table(name = "users", schema = "public")
-public class User implements Comparable<User> {
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+public abstract class User implements Comparable<User>, BaseEntity<Long> {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
 
     @Column(unique = true)
@@ -42,7 +42,6 @@ public class User implements Comparable<User> {
     private Profile profile;
 
     @OneToMany(mappedBy = "user")
-    @Builder.Default
     private List<UserChat> userChats = new ArrayList<>();
 
     @Override
