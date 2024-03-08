@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a8397ae9-3796-42ea-b8a0-77da4ceeb70c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/resources/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4aa9c594-4aae-4b14-bd47-86beb85404f0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/4aa9c594-4aae-4b14-bd47-86beb85404f0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4aa9c594-4aae-4b14-bd47-86beb85404f0/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/4aa9c594-4aae-4b14-bd47-86beb85404f0/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/BaseEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +45,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Gradle.HibernateRunnerTest.addUserToNewCompany.executor": "Run",
+    "Gradle.HibernateRunnerTest.checkH2.executor": "Run",
     "Gradle.HibernateRunnerTest.checkManyToMany.executor": "Run",
     "Gradle.HibernateRunnerTest.checkOneToOne.executor": "Run",
     "Gradle.HibernateRunnerTest.checkReflectionApi.executor": "Run",
@@ -243,7 +240,7 @@
       <workItem from="1709582440520" duration="3896000" />
       <workItem from="1709588948994" duration="11417000" />
       <workItem from="1709713174570" duration="20124000" />
-      <workItem from="1709903190796" duration="1240000" />
+      <workItem from="1709903190796" duration="2695000" />
     </task>
     <servers />
   </component>

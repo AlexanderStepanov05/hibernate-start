@@ -14,11 +14,7 @@ import java.time.Instant;
 @AllArgsConstructor
 @Builder
 @Table(name = "users_chat")
-public class UserChat {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class UserChat extends BaseEntity<Long> {
 
     @ManyToOne
     private User user;
