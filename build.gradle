@@ -21,6 +21,8 @@ dependencies {
     implementation 'org.hibernate.orm:hibernate-core:6.4.4.Final'
     runtimeOnly 'org.postgresql:postgresql:42.7.2'
 
+    annotationProcessor 'org.hibernate.orm:hibernate-jpamodelgen:6.4.4.Final'
+
     compileOnly 'org.projectlombok:lombok:1.18.30'
     annotationProcessor 'org.projectlombok:lombok:1.18.30'
     testCompileOnly 'org.projectlombok:lombok:1.18.30'
