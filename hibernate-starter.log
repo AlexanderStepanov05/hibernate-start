@@ -390,3 +390,217 @@ java.lang.IllegalStateException: Cannot get a connection as the driver manager i
 [2024-03-08 18:44:55,314] INFO [org.hibernate.orm.connections.access: 52] HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@3bf5911d] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
 [2024-03-08 18:44:55,322] INFO [org.hibernate.orm.connections.access: 52] HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@1c43df76] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
 [2024-03-08 18:44:55,489] INFO [org.hibernate.orm.connections.pooling: 606] HHH10001008: Cleaning up connection pool [jdbc:h2:mem:test_mem]
+[2024-03-09 10:53:56,764] WARN [org.testcontainers.utility.TestcontainersConfiguration: 346] Attempted to read Testcontainers configuration file at file:/home/inkerinmaa/.testcontainers.properties but the file was not found. Exception message: FileNotFoundException: /home/inkerinmaa/.testcontainers.properties (No such file or directory)
+[2024-03-09 10:53:56,776] INFO [org.testcontainers.dockerclient.DockerMachineClientProviderStrategy: 58] docker-machine executable was not found on PATH ([/home/inkerinmaa/.config/bspwm/scripts, /home/inkerinmaa/.local/bin, /usr/local/sbin, /usr/local/bin, /usr/bin, /usr/lib/jvm/default/bin, /usr/bin/site_perl, /usr/bin/vendor_perl, /usr/bin/core_perl])
+[2024-03-09 10:53:57,099] INFO [org.testcontainers.dockerclient.DockerClientProviderStrategy: 158] Found Docker environment with local Unix socket (unix:///var/run/docker.sock)
+[2024-03-09 10:53:57,118] INFO [org.testcontainers.DockerClientFactory: 179] Docker host IP address is localhost
+[2024-03-09 10:53:57,140] INFO [org.testcontainers.DockerClientFactory: 191] Connected to docker: 
+  Server Version: 25.0.3
+  API Version: 1.44
+  Operating System: Arch Linux
+  Total Memory: 15312 MB
+[2024-03-09 10:53:57,144] INFO [org.testcontainers.utility.ImageNameSubstitutor: 50] Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+[2024-03-09 10:53:57,157] INFO [org.testcontainers.utility.RegistryAuthLocator: 148] Failure when attempting to lookup auth config. Please ignore if you don't have images in an authenticated registry. Details: (dockerImageName: testcontainers/ryuk:0.3.1, configFile: /home/inkerinmaa/.docker/config.json. Falling back to docker-java default behaviour. Exception message: /home/inkerinmaa/.docker/config.json (No such file or directory)
+[2024-03-09 10:54:03,240] INFO [org.testcontainers.DockerClientFactory: 38] Starting to pull image
+[2024-03-09 10:54:03,254] INFO [org.testcontainers.DockerClientFactory: 85] Pulling image layers:  0 pending,  0 downloaded,  0 extracted, (0 bytes/0 bytes)
+[2024-03-09 10:54:08,919] INFO [org.testcontainers.DockerClientFactory: 85] Pulling image layers:  2 pending,  1 downloaded,  0 extracted, (860 KB/? MB)
+[2024-03-09 10:54:13,857] INFO [org.testcontainers.DockerClientFactory: 85] Pulling image layers:  1 pending,  2 downloaded,  0 extracted, (2 MB/? MB)
+[2024-03-09 10:54:19,701] INFO [org.testcontainers.DockerClientFactory: 85] Pulling image layers:  0 pending,  3 downloaded,  0 extracted, (4 MB/5 MB)
+[2024-03-09 10:54:19,798] INFO [org.testcontainers.DockerClientFactory: 85] Pulling image layers:  0 pending,  3 downloaded,  1 extracted, (5 MB/5 MB)
+[2024-03-09 10:54:19,948] INFO [org.testcontainers.DockerClientFactory: 85] Pulling image layers:  0 pending,  3 downloaded,  2 extracted, (5 MB/5 MB)
+[2024-03-09 10:54:20,021] INFO [org.testcontainers.DockerClientFactory: 85] Pulling image layers:  0 pending,  3 downloaded,  3 extracted, (5 MB/5 MB)
+[2024-03-09 10:54:20,030] INFO [org.testcontainers.DockerClientFactory: 106] Pull complete. 3 layers, pulled in 16s (downloaded 5 MB at 333 KB/s)
+[2024-03-09 10:54:20,399] INFO [org.testcontainers.DockerClientFactory: 209] Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+[2024-03-09 10:54:20,400] INFO [org.testcontainers.DockerClientFactory: 220] Checking the system...
+[2024-03-09 10:54:20,401] INFO [org.testcontainers.DockerClientFactory: 294] ✔︎ Docker server version should be at least 1.6.0
+[2024-03-09 10:54:20,470] INFO [org.testcontainers.DockerClientFactory: 294] ✔︎ Docker environment should have more than 2GB free disk space
+[2024-03-09 10:54:20,481] INFO [🐳 [postgres:13]: 72] Pulling docker image: postgres:13. Please be patient; this may take some time but only needs to be done once.
+[2024-03-09 10:54:23,097] INFO [🐳 [postgres:13]: 38] Starting to pull image
+[2024-03-09 10:54:23,098] INFO [🐳 [postgres:13]: 85] Pulling image layers:  0 pending,  0 downloaded,  0 extracted, (0 bytes/0 bytes)
+[2024-03-09 10:54:24,573] INFO [🐳 [postgres:13]: 85] Pulling image layers: 13 pending,  1 downloaded,  0 extracted, (1 KB/? MB)
+[2024-03-09 10:54:24,592] INFO [🐳 [postgres:13]: 85] Pulling image layers: 13 pending,  1 downloaded,  1 extracted, (1 KB/? MB)
+[2024-03-09 10:54:26,871] INFO [🐳 [postgres:13]: 85] Pulling image layers: 12 pending,  2 downloaded,  1 extracted, (1 MB/? MB)
+[2024-03-09 10:54:36,034] INFO [🐳 [postgres:13]: 85] Pulling image layers: 11 pending,  3 downloaded,  1 extracted, (7 MB/? MB)
+[2024-03-09 10:54:37,270] INFO [🐳 [postgres:13]: 85] Pulling image layers: 10 pending,  4 downloaded,  1 extracted, (8 MB/? MB)
+[2024-03-09 10:54:37,300] INFO [🐳 [postgres:13]: 85] Pulling image layers:  9 pending,  5 downloaded,  1 extracted, (8 MB/? MB)
+[2024-03-09 10:54:37,471] INFO [🐳 [postgres:13]: 85] Pulling image layers:  9 pending,  5 downloaded,  2 extracted, (8 MB/? MB)
+[2024-03-09 10:54:37,528] INFO [🐳 [postgres:13]: 85] Pulling image layers:  9 pending,  5 downloaded,  3 extracted, (8 MB/? MB)
+[2024-03-09 10:54:38,086] INFO [🐳 [postgres:13]: 85] Pulling image layers:  8 pending,  6 downloaded,  3 extracted, (9 MB/? MB)
+[2024-03-09 10:54:41,941] INFO [🐳 [postgres:13]: 85] Pulling image layers:  7 pending,  7 downloaded,  3 extracted, (11 MB/? MB)
+[2024-03-09 10:54:43,503] INFO [🐳 [postgres:13]: 85] Pulling image layers:  6 pending,  8 downloaded,  3 extracted, (15 MB/? MB)
+[2024-03-09 10:54:45,945] INFO [🐳 [postgres:13]: 85] Pulling image layers:  5 pending,  9 downloaded,  3 extracted, (19 MB/? MB)
+[2024-03-09 10:54:49,088] INFO [🐳 [postgres:13]: 85] Pulling image layers:  4 pending, 10 downloaded,  3 extracted, (22 MB/? MB)
+[2024-03-09 10:54:51,855] INFO [🐳 [postgres:13]: 85] Pulling image layers:  3 pending, 11 downloaded,  3 extracted, (24 MB/? MB)
+[2024-03-09 10:54:53,283] INFO [🐳 [postgres:13]: 85] Pulling image layers:  2 pending, 12 downloaded,  3 extracted, (25 MB/? MB)
+[2024-03-09 10:54:53,638] INFO [🐳 [postgres:13]: 85] Pulling image layers:  2 pending, 12 downloaded,  4 extracted, (25 MB/? MB)
+[2024-03-09 10:54:53,702] INFO [🐳 [postgres:13]: 85] Pulling image layers:  2 pending, 12 downloaded,  5 extracted, (25 MB/? MB)
+[2024-03-09 10:54:53,716] INFO [🐳 [postgres:13]: 85] Pulling image layers:  2 pending, 12 downloaded,  6 extracted, (25 MB/? MB)
+[2024-03-09 10:54:53,727] INFO [🐳 [postgres:13]: 85] Pulling image layers:  2 pending, 12 downloaded,  7 extracted, (25 MB/? MB)
+[2024-03-09 10:57:19,772] INFO [🐳 [postgres:13]: 85] Pulling image layers:  1 pending, 13 downloaded,  7 extracted, (113 MB/? MB)
+[2024-03-09 10:57:23,121] INFO [🐳 [postgres:13]: 85] Pulling image layers:  1 pending, 13 downloaded,  8 extracted, (114 MB/? MB)
+[2024-03-09 10:57:23,135] INFO [🐳 [postgres:13]: 85] Pulling image layers:  1 pending, 13 downloaded,  9 extracted, (114 MB/? MB)
+[2024-03-09 10:57:23,147] INFO [🐳 [postgres:13]: 85] Pulling image layers:  1 pending, 13 downloaded, 10 extracted, (114 MB/? MB)
+[2024-03-09 10:57:23,189] INFO [🐳 [postgres:13]: 85] Pulling image layers:  1 pending, 13 downloaded, 11 extracted, (114 MB/? MB)
+[2024-03-09 10:57:23,202] INFO [🐳 [postgres:13]: 85] Pulling image layers:  1 pending, 13 downloaded, 12 extracted, (114 MB/? MB)
+[2024-03-09 10:57:23,214] INFO [🐳 [postgres:13]: 85] Pulling image layers:  1 pending, 13 downloaded, 13 extracted, (114 MB/? MB)
+[2024-03-09 10:57:23,225] INFO [🐳 [postgres:13]: 106] Pull complete. 14 layers, pulled in 180s (downloaded 114 MB at 649 KB/s)
+[2024-03-09 10:57:23,237] INFO [🐳 [postgres:13]: 361] Creating container for image: postgres:13
+[2024-03-09 10:57:23,261] INFO [🐳 [postgres:13]: 422] Starting container with ID: 794ecdd44732aa468df916bb05893b8fc35f6386e9044d5c99779e1b626595ac
+[2024-03-09 10:57:23,468] INFO [🐳 [postgres:13]: 426] Container postgres:13 is starting: 794ecdd44732aa468df916bb05893b8fc35f6386e9044d5c99779e1b626595ac
+[2024-03-09 10:57:24,435] INFO [🐳 [postgres:13]: 501] Container postgres:13 started in PT3M3.964014988S
+[2024-03-09 10:57:24,488] INFO [org.hibernate.Version: 44] HHH000412: Hibernate ORM core version 6.4.4.Final
+[2024-03-09 10:57:24,724] INFO [org.hibernate.cache.internal.RegionFactoryInitiator: 50] HHH000026: Second-level cache disabled
+[2024-03-09 10:57:24,800] WARN [org.hibernate.orm.connections.pooling: 81] HHH10001002: Using built-in connection pool (not intended for production use)
+[2024-03-09 10:57:24,802] INFO [org.hibernate.orm.connections.pooling: 136] HHH10001005: Loaded JDBC driver class: org.h2.Driver
+[2024-03-09 10:57:24,803] INFO [org.hibernate.orm.connections.pooling: 158] HHH10001012: Connecting with JDBC URL [jdbc:h2:mem:test_mem]
+[2024-03-09 10:57:24,803] INFO [org.hibernate.orm.connections.pooling: 167] HHH10001001: Connection properties: {password=****, user=}
+[2024-03-09 10:57:24,804] INFO [org.hibernate.orm.connections.pooling: 171] HHH10001003: Autocommit mode: false
+[2024-03-09 10:57:24,806] INFO [org.hibernate.orm.connections.pooling: 371] HHH10001115: Connection pool size: 20 (min=1)
+[2024-03-09 10:57:24,919] WARN [org.hibernate.orm.deprecation: 153] HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+[2024-03-09 10:57:25,132] INFO [org.hibernate.orm.connections.pooling: 606] HHH10001008: Cleaning up connection pool [jdbc:h2:mem:test_mem]
+[2024-03-09 11:01:52,061] INFO [org.testcontainers.dockerclient.DockerClientProviderStrategy: 136] Loaded org.testcontainers.dockerclient.UnixSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+[2024-03-09 11:01:52,378] INFO [org.testcontainers.dockerclient.DockerClientProviderStrategy: 158] Found Docker environment with local Unix socket (unix:///var/run/docker.sock)
+[2024-03-09 11:01:52,380] INFO [org.testcontainers.DockerClientFactory: 179] Docker host IP address is localhost
+[2024-03-09 11:01:52,405] INFO [org.testcontainers.DockerClientFactory: 191] Connected to docker: 
+  Server Version: 25.0.3
+  API Version: 1.44
+  Operating System: Arch Linux
+  Total Memory: 15312 MB
+[2024-03-09 11:01:52,408] INFO [org.testcontainers.utility.ImageNameSubstitutor: 50] Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+[2024-03-09 11:01:52,438] INFO [org.testcontainers.utility.RegistryAuthLocator: 148] Failure when attempting to lookup auth config. Please ignore if you don't have images in an authenticated registry. Details: (dockerImageName: testcontainers/ryuk:0.3.1, configFile: /home/inkerinmaa/.docker/config.json. Falling back to docker-java default behaviour. Exception message: /home/inkerinmaa/.docker/config.json (No such file or directory)
+[2024-03-09 11:01:52,816] INFO [org.testcontainers.DockerClientFactory: 209] Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+[2024-03-09 11:01:52,816] INFO [org.testcontainers.DockerClientFactory: 220] Checking the system...
+[2024-03-09 11:01:52,817] INFO [org.testcontainers.DockerClientFactory: 294] ✔︎ Docker server version should be at least 1.6.0
+[2024-03-09 11:01:52,886] INFO [org.testcontainers.DockerClientFactory: 294] ✔︎ Docker environment should have more than 2GB free disk space
+[2024-03-09 11:01:52,895] INFO [🐳 [postgres:13]: 361] Creating container for image: postgres:13
+[2024-03-09 11:01:52,924] INFO [🐳 [postgres:13]: 422] Starting container with ID: e219b929dc78904949c2e1733d142eb9fcb399e865eebc2ee37b82faaba7be79
+[2024-03-09 11:01:53,201] INFO [🐳 [postgres:13]: 426] Container postgres:13 is starting: e219b929dc78904949c2e1733d142eb9fcb399e865eebc2ee37b82faaba7be79
+[2024-03-09 11:01:54,158] INFO [🐳 [postgres:13]: 501] Container postgres:13 started in PT1.270753882S
+[2024-03-09 11:01:54,208] INFO [org.hibernate.Version: 44] HHH000412: Hibernate ORM core version 6.4.4.Final
+[2024-03-09 11:01:54,415] INFO [org.hibernate.cache.internal.RegionFactoryInitiator: 50] HHH000026: Second-level cache disabled
+[2024-03-09 11:01:54,495] WARN [org.hibernate.orm.connections.pooling: 81] HHH10001002: Using built-in connection pool (not intended for production use)
+[2024-03-09 11:01:54,498] INFO [org.hibernate.orm.connections.pooling: 136] HHH10001005: Loaded JDBC driver class: org.h2.Driver
+[2024-03-09 11:01:54,498] INFO [org.hibernate.orm.connections.pooling: 158] HHH10001012: Connecting with JDBC URL [jdbc:h2:mem:test_mem]
+[2024-03-09 11:01:54,499] INFO [org.hibernate.orm.connections.pooling: 167] HHH10001001: Connection properties: {password=****, user=}
+[2024-03-09 11:01:54,499] INFO [org.hibernate.orm.connections.pooling: 171] HHH10001003: Autocommit mode: false
+[2024-03-09 11:01:54,502] INFO [org.hibernate.orm.connections.pooling: 371] HHH10001115: Connection pool size: 20 (min=1)
+[2024-03-09 11:01:54,615] WARN [org.hibernate.orm.deprecation: 153] HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+[2024-03-09 11:01:54,829] INFO [org.hibernate.orm.connections.pooling: 606] HHH10001008: Cleaning up connection pool [jdbc:h2:mem:test_mem]
+[2024-03-09 11:03:25,235] INFO [org.testcontainers.dockerclient.DockerClientProviderStrategy: 136] Loaded org.testcontainers.dockerclient.UnixSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+[2024-03-09 11:03:25,547] INFO [org.testcontainers.dockerclient.DockerClientProviderStrategy: 158] Found Docker environment with local Unix socket (unix:///var/run/docker.sock)
+[2024-03-09 11:03:25,549] INFO [org.testcontainers.DockerClientFactory: 179] Docker host IP address is localhost
+[2024-03-09 11:03:25,572] INFO [org.testcontainers.DockerClientFactory: 191] Connected to docker: 
+  Server Version: 25.0.3
+  API Version: 1.44
+  Operating System: Arch Linux
+  Total Memory: 15312 MB
+[2024-03-09 11:03:25,575] INFO [org.testcontainers.utility.ImageNameSubstitutor: 50] Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+[2024-03-09 11:03:25,606] INFO [org.testcontainers.utility.RegistryAuthLocator: 148] Failure when attempting to lookup auth config. Please ignore if you don't have images in an authenticated registry. Details: (dockerImageName: testcontainers/ryuk:0.3.1, configFile: /home/inkerinmaa/.docker/config.json. Falling back to docker-java default behaviour. Exception message: /home/inkerinmaa/.docker/config.json (No such file or directory)
+[2024-03-09 11:03:26,046] INFO [org.testcontainers.DockerClientFactory: 209] Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+[2024-03-09 11:03:26,046] INFO [org.testcontainers.DockerClientFactory: 220] Checking the system...
+[2024-03-09 11:03:26,047] INFO [org.testcontainers.DockerClientFactory: 294] ✔︎ Docker server version should be at least 1.6.0
+[2024-03-09 11:03:26,130] INFO [org.testcontainers.DockerClientFactory: 294] ✔︎ Docker environment should have more than 2GB free disk space
+[2024-03-09 11:03:26,139] INFO [🐳 [postgres:13]: 361] Creating container for image: postgres:13
+[2024-03-09 11:03:26,170] INFO [🐳 [postgres:13]: 422] Starting container with ID: e9e4072624cce6183b57a085e3a3913c490038e40539d0ffba33acc663e06012
+[2024-03-09 11:03:26,428] INFO [🐳 [postgres:13]: 426] Container postgres:13 is starting: e9e4072624cce6183b57a085e3a3913c490038e40539d0ffba33acc663e06012
+[2024-03-09 11:03:27,372] INFO [🐳 [postgres:13]: 501] Container postgres:13 started in PT1.240712281S
+[2024-03-09 11:03:27,419] INFO [org.hibernate.Version: 44] HHH000412: Hibernate ORM core version 6.4.4.Final
+[2024-03-09 11:03:27,610] INFO [org.hibernate.cache.internal.RegionFactoryInitiator: 50] HHH000026: Second-level cache disabled
+[2024-03-09 11:03:27,686] WARN [org.hibernate.orm.connections.pooling: 81] HHH10001002: Using built-in connection pool (not intended for production use)
+[2024-03-09 11:03:27,688] INFO [org.hibernate.orm.connections.pooling: 136] HHH10001005: Loaded JDBC driver class: org.h2.Driver
+[2024-03-09 11:03:27,689] INFO [org.hibernate.orm.connections.pooling: 158] HHH10001012: Connecting with JDBC URL [jdbc:h2:mem:test_mem]
+[2024-03-09 11:03:27,689] INFO [org.hibernate.orm.connections.pooling: 167] HHH10001001: Connection properties: {password=****, user=}
+[2024-03-09 11:03:27,689] INFO [org.hibernate.orm.connections.pooling: 171] HHH10001003: Autocommit mode: false
+[2024-03-09 11:03:27,691] INFO [org.hibernate.orm.connections.pooling: 371] HHH10001115: Connection pool size: 20 (min=1)
+[2024-03-09 11:03:27,803] WARN [org.hibernate.orm.deprecation: 153] HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+[2024-03-09 11:03:28,038] INFO [org.hibernate.orm.connections.pooling: 606] HHH10001008: Cleaning up connection pool [jdbc:h2:mem:test_mem]
+[2024-03-09 11:04:14,275] INFO [org.testcontainers.dockerclient.DockerClientProviderStrategy: 136] Loaded org.testcontainers.dockerclient.UnixSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+[2024-03-09 11:04:14,607] INFO [org.testcontainers.dockerclient.DockerClientProviderStrategy: 158] Found Docker environment with local Unix socket (unix:///var/run/docker.sock)
+[2024-03-09 11:04:14,609] INFO [org.testcontainers.DockerClientFactory: 179] Docker host IP address is localhost
+[2024-03-09 11:04:14,636] INFO [org.testcontainers.DockerClientFactory: 191] Connected to docker: 
+  Server Version: 25.0.3
+  API Version: 1.44
+  Operating System: Arch Linux
+  Total Memory: 15312 MB
+[2024-03-09 11:04:14,639] INFO [org.testcontainers.utility.ImageNameSubstitutor: 50] Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+[2024-03-09 11:04:14,671] INFO [org.testcontainers.utility.RegistryAuthLocator: 148] Failure when attempting to lookup auth config. Please ignore if you don't have images in an authenticated registry. Details: (dockerImageName: testcontainers/ryuk:0.3.1, configFile: /home/inkerinmaa/.docker/config.json. Falling back to docker-java default behaviour. Exception message: /home/inkerinmaa/.docker/config.json (No such file or directory)
+[2024-03-09 11:04:15,075] INFO [org.testcontainers.DockerClientFactory: 209] Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+[2024-03-09 11:04:15,076] INFO [org.testcontainers.DockerClientFactory: 220] Checking the system...
+[2024-03-09 11:04:15,077] INFO [org.testcontainers.DockerClientFactory: 294] ✔︎ Docker server version should be at least 1.6.0
+[2024-03-09 11:04:15,137] INFO [org.testcontainers.DockerClientFactory: 294] ✔︎ Docker environment should have more than 2GB free disk space
+[2024-03-09 11:04:15,146] INFO [🐳 [postgres:13]: 361] Creating container for image: postgres:13
+[2024-03-09 11:04:15,175] INFO [🐳 [postgres:13]: 422] Starting container with ID: d5cbf4642858ddf439da4dbed4ae234813a34c9076b8aeea2624599ea1583a86
+[2024-03-09 11:04:15,399] INFO [🐳 [postgres:13]: 426] Container postgres:13 is starting: d5cbf4642858ddf439da4dbed4ae234813a34c9076b8aeea2624599ea1583a86
+[2024-03-09 11:04:16,341] INFO [🐳 [postgres:13]: 501] Container postgres:13 started in PT1.20166772S
+[2024-03-09 11:04:16,393] INFO [org.hibernate.Version: 44] HHH000412: Hibernate ORM core version 6.4.4.Final
+[2024-03-09 11:04:16,584] INFO [org.hibernate.cache.internal.RegionFactoryInitiator: 50] HHH000026: Second-level cache disabled
+[2024-03-09 11:04:16,653] WARN [org.hibernate.orm.connections.pooling: 81] HHH10001002: Using built-in connection pool (not intended for production use)
+[2024-03-09 11:04:16,655] INFO [org.hibernate.orm.connections.pooling: 136] HHH10001005: Loaded JDBC driver class: org.h2.Driver
+[2024-03-09 11:04:16,655] INFO [org.hibernate.orm.connections.pooling: 158] HHH10001012: Connecting with JDBC URL [jdbc:h2:mem:test_mem]
+[2024-03-09 11:04:16,656] INFO [org.hibernate.orm.connections.pooling: 167] HHH10001001: Connection properties: {password=****, user=}
+[2024-03-09 11:04:16,656] INFO [org.hibernate.orm.connections.pooling: 171] HHH10001003: Autocommit mode: false
+[2024-03-09 11:04:16,658] INFO [org.hibernate.orm.connections.pooling: 371] HHH10001115: Connection pool size: 20 (min=1)
+[2024-03-09 11:04:16,764] WARN [org.hibernate.orm.deprecation: 153] HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+[2024-03-09 11:04:17,002] INFO [org.hibernate.orm.connections.pooling: 606] HHH10001008: Cleaning up connection pool [jdbc:h2:mem:test_mem]
+[2024-03-09 11:05:17,153] INFO [org.testcontainers.dockerclient.DockerClientProviderStrategy: 136] Loaded org.testcontainers.dockerclient.UnixSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+[2024-03-09 11:05:17,477] INFO [org.testcontainers.dockerclient.DockerClientProviderStrategy: 158] Found Docker environment with local Unix socket (unix:///var/run/docker.sock)
+[2024-03-09 11:05:17,479] INFO [org.testcontainers.DockerClientFactory: 179] Docker host IP address is localhost
+[2024-03-09 11:05:17,505] INFO [org.testcontainers.DockerClientFactory: 191] Connected to docker: 
+  Server Version: 25.0.3
+  API Version: 1.44
+  Operating System: Arch Linux
+  Total Memory: 15312 MB
+[2024-03-09 11:05:17,507] INFO [org.testcontainers.utility.ImageNameSubstitutor: 50] Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+[2024-03-09 11:05:17,547] INFO [org.testcontainers.utility.RegistryAuthLocator: 148] Failure when attempting to lookup auth config. Please ignore if you don't have images in an authenticated registry. Details: (dockerImageName: testcontainers/ryuk:0.3.1, configFile: /home/inkerinmaa/.docker/config.json. Falling back to docker-java default behaviour. Exception message: /home/inkerinmaa/.docker/config.json (No such file or directory)
+[2024-03-09 11:05:17,978] INFO [org.testcontainers.DockerClientFactory: 209] Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+[2024-03-09 11:05:17,978] INFO [org.testcontainers.DockerClientFactory: 220] Checking the system...
+[2024-03-09 11:05:17,979] INFO [org.testcontainers.DockerClientFactory: 294] ✔︎ Docker server version should be at least 1.6.0
+[2024-03-09 11:05:18,050] INFO [org.testcontainers.DockerClientFactory: 294] ✔︎ Docker environment should have more than 2GB free disk space
+[2024-03-09 11:05:18,060] INFO [🐳 [postgres:13]: 361] Creating container for image: postgres:13
+[2024-03-09 11:05:18,089] INFO [🐳 [postgres:13]: 422] Starting container with ID: 42646e5343e2c2f49078abc651d28a1020f5084100d2d1f54113749cd2875453
+[2024-03-09 11:05:18,311] INFO [🐳 [postgres:13]: 426] Container postgres:13 is starting: 42646e5343e2c2f49078abc651d28a1020f5084100d2d1f54113749cd2875453
+[2024-03-09 11:05:19,246] INFO [🐳 [postgres:13]: 501] Container postgres:13 started in PT1.194337179S
+[2024-03-09 11:05:19,292] INFO [org.hibernate.Version: 44] HHH000412: Hibernate ORM core version 6.4.4.Final
+[2024-03-09 11:05:19,469] INFO [org.hibernate.cache.internal.RegionFactoryInitiator: 50] HHH000026: Second-level cache disabled
+[2024-03-09 11:05:19,537] WARN [org.hibernate.orm.connections.pooling: 81] HHH10001002: Using built-in connection pool (not intended for production use)
+[2024-03-09 11:05:19,539] INFO [org.hibernate.orm.connections.pooling: 136] HHH10001005: Loaded JDBC driver class: org.h2.Driver
+[2024-03-09 11:05:19,540] INFO [org.hibernate.orm.connections.pooling: 158] HHH10001012: Connecting with JDBC URL [jdbc:h2:mem:test_mem]
+[2024-03-09 11:05:19,540] INFO [org.hibernate.orm.connections.pooling: 167] HHH10001001: Connection properties: {password=****, user=}
+[2024-03-09 11:05:19,541] INFO [org.hibernate.orm.connections.pooling: 171] HHH10001003: Autocommit mode: false
+[2024-03-09 11:05:19,543] INFO [org.hibernate.orm.connections.pooling: 371] HHH10001115: Connection pool size: 20 (min=1)
+[2024-03-09 11:05:19,651] WARN [org.hibernate.orm.deprecation: 153] HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+[2024-03-09 11:05:20,656] INFO [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator: 58] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2024-03-09 11:05:20,668] INFO [org.hibernate.orm.connections.access: 52] HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@7846913f] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[2024-03-09 11:05:20,677] INFO [org.hibernate.orm.connections.access: 52] HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2270f58d] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[2024-03-09 11:05:21,284] INFO [org.hibernate.orm.connections.pooling: 606] HHH10001008: Cleaning up connection pool [jdbc:h2:mem:test_mem]
+[2024-03-09 12:11:41,008] INFO [org.testcontainers.dockerclient.DockerClientProviderStrategy: 136] Loaded org.testcontainers.dockerclient.UnixSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+[2024-03-09 12:11:41,340] INFO [org.testcontainers.dockerclient.DockerClientProviderStrategy: 158] Found Docker environment with local Unix socket (unix:///var/run/docker.sock)
+[2024-03-09 12:11:41,342] INFO [org.testcontainers.DockerClientFactory: 179] Docker host IP address is localhost
+[2024-03-09 12:11:41,364] INFO [org.testcontainers.DockerClientFactory: 191] Connected to docker: 
+  Server Version: 25.0.3
+  API Version: 1.44
+  Operating System: Arch Linux
+  Total Memory: 15312 MB
+[2024-03-09 12:11:41,367] INFO [org.testcontainers.utility.ImageNameSubstitutor: 50] Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+[2024-03-09 12:11:41,403] INFO [org.testcontainers.utility.RegistryAuthLocator: 148] Failure when attempting to lookup auth config. Please ignore if you don't have images in an authenticated registry. Details: (dockerImageName: testcontainers/ryuk:0.3.1, configFile: /home/inkerinmaa/.docker/config.json. Falling back to docker-java default behaviour. Exception message: /home/inkerinmaa/.docker/config.json (No such file or directory)
+[2024-03-09 12:11:41,806] INFO [org.testcontainers.DockerClientFactory: 209] Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+[2024-03-09 12:11:41,806] INFO [org.testcontainers.DockerClientFactory: 220] Checking the system...
+[2024-03-09 12:11:41,807] INFO [org.testcontainers.DockerClientFactory: 294] ✔︎ Docker server version should be at least 1.6.0
+[2024-03-09 12:11:41,889] INFO [org.testcontainers.DockerClientFactory: 294] ✔︎ Docker environment should have more than 2GB free disk space
+[2024-03-09 12:11:41,897] INFO [🐳 [postgres:13]: 361] Creating container for image: postgres:13
+[2024-03-09 12:11:41,924] INFO [🐳 [postgres:13]: 422] Starting container with ID: 8a4d6db7a8df003eecdffb904aa4a76b77217e67b6493a249d833e9b2e644053
+[2024-03-09 12:11:42,165] INFO [🐳 [postgres:13]: 426] Container postgres:13 is starting: 8a4d6db7a8df003eecdffb904aa4a76b77217e67b6493a249d833e9b2e644053
+[2024-03-09 12:11:43,101] INFO [🐳 [postgres:13]: 501] Container postgres:13 started in PT1.210017386S
+[2024-03-09 12:11:43,151] INFO [org.hibernate.Version: 44] HHH000412: Hibernate ORM core version 6.4.4.Final
+[2024-03-09 12:11:43,346] INFO [org.hibernate.cache.internal.RegionFactoryInitiator: 50] HHH000026: Second-level cache disabled
+[2024-03-09 12:11:43,421] WARN [org.hibernate.orm.connections.pooling: 81] HHH10001002: Using built-in connection pool (not intended for production use)
+[2024-03-09 12:11:43,424] INFO [org.hibernate.orm.connections.pooling: 136] HHH10001005: Loaded JDBC driver class: org.h2.Driver
+[2024-03-09 12:11:43,425] INFO [org.hibernate.orm.connections.pooling: 158] HHH10001012: Connecting with JDBC URL [jdbc:h2:mem:test_mem]
+[2024-03-09 12:11:43,425] INFO [org.hibernate.orm.connections.pooling: 167] HHH10001001: Connection properties: {password=****, user=}
+[2024-03-09 12:11:43,425] INFO [org.hibernate.orm.connections.pooling: 171] HHH10001003: Autocommit mode: false
+[2024-03-09 12:11:43,428] INFO [org.hibernate.orm.connections.pooling: 371] HHH10001115: Connection pool size: 20 (min=1)
+[2024-03-09 12:11:43,539] WARN [org.hibernate.orm.deprecation: 153] HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+[2024-03-09 12:11:44,521] INFO [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator: 58] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2024-03-09 12:11:44,534] INFO [org.hibernate.orm.connections.access: 52] HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@66abb2fa] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[2024-03-09 12:11:44,542] INFO [org.hibernate.orm.connections.access: 52] HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@7323c38c] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[2024-03-09 12:11:45,213] INFO [org.hibernate.orm.connections.pooling: 606] HHH10001008: Cleaning up connection pool [jdbc:h2:mem:test_mem]

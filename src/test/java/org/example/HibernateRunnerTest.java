@@ -22,37 +22,15 @@ import static java.util.stream.Collectors.joining;
 class HibernateRunnerTest {
 
     @Test
-    void checkH2() {
+    void checkHql() {
         try (var sessionFactory = HibernateUtil.buildSessionFactory();
              var session = sessionFactory.openSession()) {
             session.beginTransaction();
 
-            var facebook = Company.builder()
-                    .name("Facebook")
-                    .build();
-
-            session.persist(facebook);
-
-            Programmer programmer = Programmer.builder()
-                    .username("ivan@gmail.com")
-                    .language(Language.JAVA)
-                    .company(facebook)
-                    .build();
-            session.persist(programmer);
-
-            Manager manager = Manager.builder()
-                    .username("sveta@gmail.com")
-                    .projectName("Starter")
-                    .company(facebook)
-                    .build();
-            session.persist(manager);
-            session.flush();
-
-            session.clear();
-
-            var programmer1 = session.get(Programmer.class, 1L);
-            var manager1 = session.get(User.class, 2L);
-            System.out.println();
+            var query = session.createQuery("select u from User u where u.personalInfo.firstname= :firstname",
+                    User.class)
+                    .setParameter("firstname", "Ivan")
+                    .list();
 
             session.getTransaction().commit();
         }

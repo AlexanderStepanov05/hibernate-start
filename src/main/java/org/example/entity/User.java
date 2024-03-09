@@ -14,9 +14,10 @@ import java.util.List;
 @EqualsAndHashCode(of = "username")
 @ToString(exclude = {"company", "profile", "userChats"})
 @Entity
+@Builder
 @Table(name = "users", schema = "public")
 @Inheritance(strategy = InheritanceType.JOINED)
-public abstract class User implements Comparable<User>, BaseEntity<Long> {
+public class User implements Comparable<User>, BaseEntity<Long> {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -41,11 +42,20 @@ public abstract class User implements Comparable<User>, BaseEntity<Long> {
     @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
     private Profile profile;
 
+    @Builder.Default
     @OneToMany(mappedBy = "user")
     private List<UserChat> userChats = new ArrayList<>();
+
+    @Builder.Default
+    @OneToMany(mappedBy = "receiver")
+    private List<Payment> payments = new ArrayList<>();
 
     @Override
     public int compareTo(User user) {
         return username.compareTo(user.username);
+    }
+
+    public String fullName() {
+        return getPersonalInfo().getFirstname() + " " + getPersonalInfo().getLastname();
     }
 }

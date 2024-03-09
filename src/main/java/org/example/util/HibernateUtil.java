@@ -3,8 +3,8 @@ package org.example.util;
 import lombok.experimental.UtilityClass;
 import org.example.converter.BirthdayConverter;
 import org.example.entity.*;
-
 import org.hibernate.SessionFactory;
+import org.hibernate.boot.model.naming.CamelCaseToUnderscoresNamingStrategy;
 import org.hibernate.cfg.Configuration;
 
 @UtilityClass
@@ -13,9 +13,8 @@ public class HibernateUtil {
         Configuration configuration = new Configuration();
 //        configuration.setPhysicalNamingStrategy(new CamelCaseToUnderscoresNamingStrategy());
         configuration.addAttributeConverter(new BirthdayConverter());
-        configuration.addAnnotatedClass(Manager.class);
-        configuration.addAnnotatedClass(Programmer.class);
         configuration.addAnnotatedClass(UserChat.class);
+        configuration.addAnnotatedClass(Payment.class);
         configuration.addAnnotatedClass(Chat.class);
         configuration.addAnnotatedClass(Profile.class);
         configuration.addAnnotatedClass(Company.class);
@@ -23,5 +22,18 @@ public class HibernateUtil {
         configuration.configure();
 
         return configuration.buildSessionFactory();
+    }
+
+    public static Configuration buildConfiguration() {
+        Configuration configuration = new Configuration();
+        configuration.setPhysicalNamingStrategy(new CamelCaseToUnderscoresNamingStrategy());
+        configuration.addAttributeConverter(new BirthdayConverter());
+        configuration.addAnnotatedClass(Payment.class);
+        configuration.addAnnotatedClass(UserChat.class);
+        configuration.addAnnotatedClass(Chat.class);
+        configuration.addAnnotatedClass(Profile.class);
+        configuration.addAnnotatedClass(Company.class);
+        configuration.addAnnotatedClass(User.class);
+        return configuration;
     }
 }
