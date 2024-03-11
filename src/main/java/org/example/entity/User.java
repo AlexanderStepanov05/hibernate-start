@@ -8,6 +8,13 @@ import org.hibernate.type.SqlTypes;
 import java.util.ArrayList;
 import java.util.List;
 
+@NamedEntityGraph(
+        name = "withCompanyAndChat",
+        attributeNodes = {
+                @NamedAttributeNode("company"),
+                @NamedAttributeNode("userChats")
+        }
+)
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -15,6 +22,11 @@ import java.util.List;
 @ToString(exclude = {"company", "profile", "userChats"})
 @Entity
 @Builder
+//@FetchProfile(name = "withCompany", fetchOverrides = {
+//        @FetchProfile.FetchOverride(
+//                entity = User.class, association = "company", mode = FetchMode.JOIN
+//        )
+//})
 @Table(name = "users", schema = "public")
 @Inheritance(strategy = InheritanceType.JOINED)
 public class User implements Comparable<User>, BaseEntity<Long> {
@@ -39,7 +51,7 @@ public class User implements Comparable<User>, BaseEntity<Long> {
     @JoinColumn(name = "company_id")
     private Company company;
 
-    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
+    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private Profile profile;
 
     @Builder.Default
@@ -48,6 +60,7 @@ public class User implements Comparable<User>, BaseEntity<Long> {
 
     @Builder.Default
     @OneToMany(mappedBy = "receiver")
+//    @Fetch(FetchMode.SUBSELECT)
     private List<Payment> payments = new ArrayList<>();
 
     @Override

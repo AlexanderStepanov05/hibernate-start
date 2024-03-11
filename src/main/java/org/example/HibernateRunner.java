@@ -1,44 +1,40 @@
 package org.example;
 
 import lombok.extern.slf4j.Slf4j;
-import org.example.entity.Company;
 import org.example.entity.User;
 import org.example.util.HibernateUtil;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
+import org.hibernate.graph.GraphSemantic;
+
+import java.util.Map;
 
 @Slf4j
 public class HibernateRunner {
-
-//    private static final Logger log = LoggerFactory.getLogger(HibernateRunner.class);
-
     public static void main(String[] args) {
-        Company company = Company.builder()
-                .name("Google")
-                .build();
+        try (SessionFactory sessionFactory = HibernateUtil.buildSessionFactory();
+             Session session = sessionFactory.openSession()) {
+            session.beginTransaction();
 
-//        User user = User.builder()          // transient to s1 and s2
-//                .username("ivan2@gmail.com")
-//                .personalInfo(PersonalInfo.builder()
-//                        .firstname("Ivan")
-//                        .lastname("Ivanov")
-//                        .birthDate(new Birthday(LocalDate.of(2000, 1, 1)))
-//                        .build())
-//                .company(company)
-//                .build();
+//            session.enableFetchProfile("withCompany");
 
-        try (SessionFactory sessionFactory = HibernateUtil.buildSessionFactory()) {
-            Session session1 = sessionFactory.openSession();
-            try (session1) {
-                Transaction transaction = session1.beginTransaction();
-                session1.get(User.class, 1L);
+            Map<String, Object> properties = Map.of(
+                    GraphSemantic.LOAD.getJakartaHintName(), session.getEntityGraph("withCompanyAndChat")
+            );
 
-//                session1.persist(company);
-//                session1.persist(user); // persistent to s1, transient to s2
+            var user = session.find(User.class, 1L, properties);
+            System.out.println(user.getCompany().getName());
+            System.out.println(user.getUserChats().size());
 
-                session1.getTransaction().commit();
-            }
+            var users = session.createQuery("select u from User u where 1=1", User.class)
+                    .setHint(GraphSemantic.LOAD.getJakartaHintName(), session.getEntityGraph("withCompanyAndChat"))
+                    .list();
+
+            users.forEach(it -> System.out.println(it.getPayments().size()));
+            users.forEach(it -> System.out.println(it.getCompany().getName()));
+
+            session.getTransaction().commit();
         }
     }
 }
+
