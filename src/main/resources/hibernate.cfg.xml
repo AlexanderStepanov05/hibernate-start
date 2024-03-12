@@ -11,6 +11,7 @@
     <property name="show_sql">true</property>
     <property name="format_sql">true</property>
 <!--    <property name="hbm2ddl.auto">create</property>-->
+<!--    <property name="hibernate.connection.isolation">1</property>-->
 
     <!-- DB schema will be updated if needed -->
     <!-- <property name="hibernate.hbm2ddl.auto">update</property> -->
