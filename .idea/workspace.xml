@@ -5,13 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a8397ae9-3796-42ea-b8a0-77da4ceeb70c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4aa9c594-4aae-4b14-bd47-86beb85404f0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/4aa9c594-4aae-4b14-bd47-86beb85404f0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4aa9c594-4aae-4b14-bd47-86beb85404f0/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/4aa9c594-4aae-4b14-bd47-86beb85404f0/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hibernate-starter.log" beforeDir="false" afterPath="$PROJECT_DIR$/hibernate-starter.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/HibernateRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/HibernateRunner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entity/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/Payment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

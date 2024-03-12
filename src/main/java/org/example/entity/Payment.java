@@ -2,9 +2,6 @@ package org.example.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
-import org.hibernate.annotations.DynamicUpdate;
-import org.hibernate.annotations.OptimisticLockType;
-import org.hibernate.annotations.OptimisticLocking;
 
 @Entity
 @Getter
@@ -12,8 +9,8 @@ import org.hibernate.annotations.OptimisticLocking;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@OptimisticLocking(type = OptimisticLockType.ALL)
-@DynamicUpdate
+//@OptimisticLocking(type = OptimisticLockType.ALL)
+//@DynamicUpdate
 public class Payment implements BaseEntity<Long> {
 
     @Id
