@@ -5,7 +5,6 @@ import jakarta.transaction.Transactional;
 import lombok.extern.slf4j.Slf4j;
 import org.example.entity.Payment;
 import org.example.util.HibernateUtil;
-import org.example.util.TestDataImporter;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
@@ -29,6 +28,9 @@ public class HibernateRunner {
 
                 session.getTransaction().commit();
                 session1.getTransaction().commit();
+
+//          setDefaultReadOnly(true), setReadOnly(); createQuery().setReadOnly(true).setHint(QueryHints.READ_ONLY, true);
+//            createNativeQuery("set transaction read only;").executeUpdate();
         }
     }
 }
