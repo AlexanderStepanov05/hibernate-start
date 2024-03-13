@@ -2,6 +2,8 @@ package org.example.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.annotations.Cache;
+import org.hibernate.annotations.CacheConcurrencyStrategy;
 import org.hibernate.annotations.SortNatural;
 
 import java.util.ArrayList;
@@ -16,6 +18,7 @@ import java.util.TreeSet;
 @ToString(exclude = "users")
 @EqualsAndHashCode(exclude = "users")
 @Builder
+@Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
 public class Company {
 
     @Id
