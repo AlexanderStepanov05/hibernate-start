@@ -2,11 +2,12 @@ package org.example;
 
 import jakarta.transaction.Transactional;
 import lombok.extern.slf4j.Slf4j;
-import org.example.entity.Payment;
-import org.example.entity.User;
+import org.example.dao.PaymentRepository;
 import org.example.util.HibernateUtil;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+
+import java.lang.reflect.Proxy;
 
 @Slf4j
 public class HibernateRunner {
@@ -14,34 +15,17 @@ public class HibernateRunner {
     @Transactional
     public static void main(String[] args) {
         try (SessionFactory sessionFactory = HibernateUtil.buildSessionFactory()) {
-            User user = null;
-            try (Session session = sessionFactory.openSession()) {
 //                TestDataImporter.importData(sessionFactory);
-                session.beginTransaction();
 
-                user = session.find(User.class, 1L);
-                var user1 = session.find(User.class, 1L);
+            var session = (Session) Proxy.newProxyInstance(SessionFactory.class.getClassLoader(), new Class[]{Session.class},
+                    (o, method, objects) -> method.invoke(sessionFactory.getCurrentSession(), objects));
 
-                var payments = session.createQuery("select p from Payment p where p.receiver.id = :userId", Payment.class)
-                        .setParameter("userId", 1L)
-                        .setCacheable(true)
-                        .getResultList();
+            session.beginTransaction();
 
-                session.getTransaction().commit();
-            }
-            try (Session session = sessionFactory.openSession()) {
-//                TestDataImporter.importData(sessionFactory);
-                session.beginTransaction();
+            var paymentRepository = new PaymentRepository(session);
+            paymentRepository.findById(1L).ifPresent(System.out::println);
 
-                var user2 = session.find(User.class, 1L);
-
-                var payments = session.createQuery("select p from Payment p where p.receiver.id = :userId", Payment.class)
-                        .setParameter("userId", 1L)
-                        .setCacheable(true)
-                        .getResultList();
-
-                session.getTransaction().commit();
-            }
+            session.getTransaction().commit();
         }
     }
 }

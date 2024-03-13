@@ -10,10 +10,11 @@
     <property name="connection.driver_class">org.postgresql.Driver</property>
     <property name="show_sql">true</property>
     <property name="format_sql">true</property>
-    <property name="hbm2ddl.auto">create</property>
+<!--    <property name="hbm2ddl.auto">create</property>-->
     <property name="cache.use_second_level_cache">true</property>
     <property name="cache.use_query_cache">true</property>
     <property name="hibernate.cache.region.factory_class">org.hibernate.cache.jcache.internal.JCacheRegionFactory</property>
+    <property name="current_session_context_class">thread</property>
 <!--    <property name="hibernate.connection.isolation">1</property>-->
 
     <!-- DB schema will be updated if needed -->
