@@ -11,7 +11,7 @@ import lombok.*;
 @Builder
 //@OptimisticLocking(type = OptimisticLockType.ALL)
 //@DynamicUpdate
-public class Payment implements BaseEntity<Long> {
+public class Payment extends AuditableEntity<Long> {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,5 +26,4 @@ public class Payment implements BaseEntity<Long> {
     @ManyToOne(optional = false)
     @JoinColumn(name = "receiver_id")
     private User receiver;
-
 }
