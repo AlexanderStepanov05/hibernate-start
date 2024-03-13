@@ -1,6 +1,7 @@
 package org.example.entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.Valid;
 import lombok.*;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
@@ -48,6 +49,7 @@ public class User implements Comparable<User>, BaseEntity<Long> {
     private String username;
 
     @Embedded
+    @Valid
     private PersonalInfo personalInfo;
 
     @Enumerated(EnumType.STRING)

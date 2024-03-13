@@ -2,6 +2,7 @@ package org.example.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -26,5 +27,6 @@ public class PersonalInfo implements Serializable {
 
     //    @Convert(converter = BirthdayConverter.class)
     @Column(name = "birth_date")
+    @NotNull
     private LocalDate birthDate;
 }

@@ -1,6 +1,8 @@
 package org.example.service;
 
 import jakarta.transaction.Transactional;
+import jakarta.validation.ConstraintViolationException;
+import jakarta.validation.Validation;
 import lombok.RequiredArgsConstructor;
 import org.example.dao.UserRepository;
 import org.example.dto.UserCreateDto;
@@ -22,7 +24,13 @@ public class UserService {
 
     @Transactional
     public Long create(UserCreateDto userDto) {
-        // validate
+        var validatorFactory = Validation.buildDefaultValidatorFactory();
+        var validator = validatorFactory.getValidator();
+        var validationResults = validator.validate(userDto);
+        if (!validationResults.isEmpty()) {
+            throw new ConstraintViolationException(validationResults);
+        }
+
         var userEntity = userCreateMapper.mapFrom(userDto);
         return userRepository.save(userEntity).getId();
     }

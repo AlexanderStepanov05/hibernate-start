@@ -26,6 +26,9 @@ dependencies {
 
     runtimeOnly 'org.postgresql:postgresql:42.7.2'
 
+    implementation 'org.hibernate.validator:hibernate-validator:8.0.1.Final'
+
+
     annotationProcessor 'org.hibernate.orm:hibernate-jpamodelgen:6.4.4.Final'
 
     compileOnly 'org.projectlombok:lombok:1.18.30'
