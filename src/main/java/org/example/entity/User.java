@@ -17,6 +17,12 @@ import java.util.List;
                 @NamedAttributeNode("userChats")
         }
 )
+@NamedEntityGraph(
+        name = "withCompany",
+        attributeNodes = {
+                @NamedAttributeNode("company"),
+        }
+)
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -54,8 +60,8 @@ public class User implements Comparable<User>, BaseEntity<Long> {
     @JoinColumn(name = "company_id")
     private Company company;
 
-    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private Profile profile;
+//    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+//    private Profile profile;
 
     @Builder.Default
     @OneToMany(mappedBy = "user")

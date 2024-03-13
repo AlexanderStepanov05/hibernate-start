@@ -6,10 +6,7 @@ import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 import org.hibernate.annotations.SortNatural;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Set;
-import java.util.TreeSet;
+import java.util.*;
 
 @Entity
 @Data
@@ -36,7 +33,7 @@ public class Company implements BaseEntity<Integer> {
     @Builder.Default
     @ElementCollection
     @CollectionTable(name = "company_locale", joinColumns = @JoinColumn(name = "company_id"))
-    private List<LocaleInfo> locales = new ArrayList<>();
+    private Map<String, String> locales = new HashMap<>();
 
     public void addUser(User user) {
         users.add(user);

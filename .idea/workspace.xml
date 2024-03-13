@@ -5,15 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a8397ae9-3796-42ea-b8a0-77da4ceeb70c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/CompanyRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/PaymentRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/Repository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/RepositoryBase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/CompanyReadDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/UserCreateDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/UserReadDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/interceptor/TransactionInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/mapper/CompanyReadMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/mapper/Mapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/mapper/UserCreateMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/mapper/UserReadMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hibernate-starter.log" beforeDir="false" afterPath="$PROJECT_DIR$/hibernate-starter.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/HibernateRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/HibernateRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/Repository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/RepositoryBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/RepositoryBase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entity/Company.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/Company.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entity/Profile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/Profile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,6 +136,8 @@
 }</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="org.example.mapper" />
+      <recent name="org.example.dto" />
       <recent name="org.example.entity" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -138,6 +150,7 @@
       <recent name="org.example" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.example.dao" />
       <recent name="org.example.util" />
     </key>
   </component>
