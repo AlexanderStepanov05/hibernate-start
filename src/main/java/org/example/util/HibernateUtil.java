@@ -3,6 +3,7 @@ package org.example.util;
 import lombok.experimental.UtilityClass;
 import org.example.converter.BirthdayConverter;
 import org.example.entity.*;
+import org.example.interceptor.GlobalInterceptor;
 import org.example.listener.AuditTableListener;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.model.naming.CamelCaseToUnderscoresNamingStrategy;
@@ -47,6 +48,7 @@ public class HibernateUtil {
         configuration.addAnnotatedClass(Profile.class);
         configuration.addAnnotatedClass(Company.class);
         configuration.addAnnotatedClass(User.class);
+        configuration.setInterceptor(new GlobalInterceptor());
         return configuration;
     }
 }
