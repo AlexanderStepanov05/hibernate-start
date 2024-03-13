@@ -1,10 +1,10 @@
 package org.example.entity;
 
+import jakarta.persistence.EntityListeners;
 import jakarta.persistence.MappedSuperclass;
-import jakarta.persistence.PrePersist;
-import jakarta.persistence.PreUpdate;
 import lombok.Getter;
 import lombok.Setter;
+import org.example.listener.AuditListener;
 
 import java.io.Serializable;
 import java.time.Instant;
@@ -12,6 +12,7 @@ import java.time.Instant;
 @Setter
 @Getter
 @MappedSuperclass
+@EntityListeners(AuditListener.class)
 public abstract class AuditableEntity<T extends Serializable> implements BaseEntity<T> {
 
     private Instant createdAt;
@@ -19,15 +20,4 @@ public abstract class AuditableEntity<T extends Serializable> implements BaseEnt
 
     private Instant updatedAt;
     private String updatedBy;
-
-
-    @PrePersist
-    public void prePersist() {
-        setCreatedAt(Instant.now());
-    }
-
-    @PreUpdate
-    public void preUpdate() {
-        setUpdatedAt(Instant.now());
-    }
 }
